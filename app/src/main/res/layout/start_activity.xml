@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/unnamed"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    >
+
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Select a team for Toss !"
+    android:layout_marginLeft="5sp"
+    android:textColor="@color/richBlack"
+    android:layout_marginRight="5sp"
+    android:fontFamily="serif"
+    android:textSize="25sp"
+    android:textStyle="bold"
+
+    />
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/rg1">
+
+        <RadioButton
+            android:id="@+id/teama_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:text="Team A"
+            android:textSize="25sp"
+            android:layout_marginLeft="5sp"
+            android:background="@color/skyBlue"
+            />
+        <RadioButton
+            android:id="@+id/teamb_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:layout_marginLeft="5sp"
+            android:text="Team B"
+            android:textSize="25sp"
+            android:background="@color/green"/>
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heads or Tails ?"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:fontFamily="serif"
+        android:textColor="@color/richBlack"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="25sp"
+        />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="5sp"
+        android:id="@+id/rg2"
+       >
+
+        <RadioButton
+            android:id="@+id/heads_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:text="Heads"
+            android:textSize="25sp"
+            android:background="@color/skyBlue"
+            android:layout_marginTop="5sp"
+            />
+        <RadioButton
+            android:id="@+id/tails_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:text="Tails"
+            android:textSize="25sp"
+            android:layout_marginTop="5sp"
+            android:background="@color/green"/>
+    </RadioGroup>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toss_res"
+        android:text="     "
+        android:layout_marginTop="25sp"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:fontFamily="serif"
+        android:textColor="@color/richBlack"
+        android:textSize="25sp"
+        android:textStyle="bold"
+
+        />
+<ProgressBar
+    android:layout_width="30sp"
+    android:id="@+id/pb"
+    android:layout_height="match_parent"
+    android:layout_alignParentRight="true"
+    android:outlineAmbientShadowColor="@color/skyBlue"
+    android:outlineSpotShadowColor="@color/richBlack"
+    android:layout_toRightOf="@+id/toss_res"
+    android:layout_alignBottom="@id/toss_res"
+    android:visibility="invisible"
+    />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginTop="25sp"
+        android:layout_marginRight="5sp"
+        android:fontFamily="serif"
+        android:text="Choose to ?"
+        android:textColor="@color/richBlack"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="5sp"
+        android:id="@+id/rg3"
+        >
+
+        <RadioButton
+            android:id="@+id/bat_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:text="Bat"
+            android:textSize="25sp"
+            android:background="@color/skyBlue"
+            android:layout_marginTop="5sp"
+            />
+        <RadioButton
+            android:id="@+id/bowl_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:text="Bowl"
+            android:textSize="25sp"
+            android:layout_marginRight="5sp"
+            android:layout_marginTop="5sp"
+
+            android:background="@color/green"/>
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select the overs"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:fontFamily="serif"
+        android:textColor="@color/richBlack"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="25sp"
+        />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="5sp"
+        android:id="@+id/rg4"
+        >
+
+        <RadioButton
+            android:id="@+id/five_ov"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:text="5 Overs"
+            android:textSize="25sp"
+            android:background="@color/skyBlue"
+            android:layout_marginTop="5sp"
+            />
+        <RadioButton
+            android:id="@+id/ten_ov"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:text="10 Overs"
+            android:textSize="25sp"
+            android:layout_marginTop="5sp"
+            android:background="@color/green"/>
+    </RadioGroup>
+
+   </LinearLayout>

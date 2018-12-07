@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ball"
+    tools:context=".Bowling">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/toolbar"
+        android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/batting"
+                android:layout_width="170sp"
+                android:layout_height="50sp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/buttonstyles"
+                android:text="Batting"
+                android:textColor="@color/richBlack"
+                android:textSize="28dp"
+                android:textStyle="italic" />
+            <View
+                android:layout_width="6dp"
+                android:id="@+id/line_vert"
+                android:layout_height="match_parent"
+                android:shadowColor="@color/richBlack"
+                android:layout_toRightOf="@id/batting"
+                android:layout_marginLeft="4dp"
+                android:text=" "
+                android:background="@color/richBlack"
+                />
+            <Button
+                android:layout_width="175dp"
+                android:layout_height="43dp"
+                android:text="Bowling"
+                android:id="@+id/btn_bowling"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:textSize="28dp"
+                android:textStyle="bold"
+                android:background="@color/achromotapsia"/>
+            <View
+                android:layout_width="180dp"
+                android:layout_height="7dp"
+                android:layout_toRightOf="@+id/line_vert"
+                android:layout_below="@+id/btn_bowling"
+                android:text=" "
+                android:background="@color/richBlack"
+                />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/team_name"
+            android:textStyle="bold"
+            android:text="Team A"
+            android:layout_marginLeft="125sp"
+            android:fontFamily="cursive"
+            android:textColor="@color/richBlack"
+            android:background="@color/achromotapsia"
+            android:textSize="40dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select your Bowler!"
+        android:id="@+id/tv_title"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        android:textColor="@color/richBlack"/>
+
+       </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+        <TextView
+            android:layout_width="140sp"
+            android:layout_height="50sp"
+            android:textStyle="bold"
+            android:fontFamily="casual"
+            android:textSize="25sp"
+            android:id="@+id/tb_bowlers"
+            android:text="Bowlers"
+            android:textColor="@color/richBlack"/>
+            <View
+                android:layout_toRightOf="@id/tb_bowlers"
+                android:layout_width="3sp"
+                android:id="@+id/line"
+                android:layout_height="496sp"
+                android:background="@color/richBlack"/>
+            <TextView
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                android:layout_toRightOf="@id/line"
+                android:textStyle="bold"
+                android:fontFamily="casual"
+                android:textSize="25sp"
+                android:id="@+id/tb_runs"
+                android:text="Runs"
+                android:textColor="@color/richBlack"/>
+            <View
+                android:layout_toRightOf="@id/tb_runs"
+                android:layout_width="3sp"
+                android:id="@+id/line1"
+                android:layout_height="496sp"
+                android:background="@color/richBlack"/>
+            <TextView
+                android:layout_width="105sp"
+                android:layout_height="50sp"
+                android:layout_toRightOf="@id/line1"
+                android:textStyle="bold"
+                android:fontFamily="casual"
+                android:textSize="25sp"
+                android:id="@+id/tb_wickets"
+                android:text="Wickets"
+                android:textColor="@color/richBlack"/>
+
+            <Button
+                android:id="@+id/b1_btn"
+                android:layout_width="150sp"
+                android:layout_height="50sp"
+                android:layout_below="@+id/tb_bowlers"
+                android:layout_alignParentStart="true"
+                android:text="Bowler 1"
+
+                android:background="@drawable/buttonstyles"/>
+
+            <Button
+                android:id="@+id/r1_btn"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                android:layout_toRightOf="@id/b1_btn"
+                android:background="@drawable/buttonstyles"
+                android:layout_below="@+id/tb_runs"
+                android:layout_toEndOf="@id/line"
+                android:textSize="25sp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/w1_btn"
+                android:layout_width="105sp"
+                android:layout_height="50sp"
+                android:layout_below="@id/tb_wickets"
+                android:layout_toEndOf="@+id/line1"
+                android:textSize="25sp"
+                android:background="@drawable/buttonstyles"
+                android:text="0"  />
+
+            <Button
+                android:id="@+id/b2_btn"
+                android:layout_width="150sp"
+                android:layout_height="50sp"
+                android:layout_below="@+id/b1_btn"
+                android:layout_alignParentStart="true"
+                android:text="Bowler 2"
+                android:background="@drawable/buttonstyles"/>
+
+            <Button
+                android:id="@+id/r2_btn"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                android:layout_toRightOf="@id/b2_btn"
+                android:background="@drawable/buttonstyles"
+                android:layout_below="@+id/r1_btn"
+                android:layout_toEndOf="@id/line"
+                android:textSize="25sp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/w2_btn"
+                android:layout_width="105sp"
+                android:layout_height="50sp"
+                android:layout_toRightOf="@id/r2_btn"
+                android:layout_below="@id/w1_btn"
+                android:layout_toEndOf="@+id/line1"
+                android:textSize="25sp"
+                android:background="@drawable/buttonstyles"
+                android:text="0"  />
+            <Button
+                android:id="@+id/b3_btn"
+                android:layout_width="150sp"
+                android:layout_height="50sp"
+                android:layout_below="@+id/b2_btn"
+                android:layout_alignParentStart="true"
+                android:text="Bowler 3"
+                android:background="@drawable/buttonstyles"/>
+
+            <Button
+                android:id="@+id/r3_btn"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                android:layout_toRightOf="@id/b2_btn"
+                android:background="@drawable/buttonstyles"
+                android:layout_below="@+id/r2_btn"
+                android:layout_toEndOf="@id/line"
+                android:textSize="25sp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/w3_btn"
+                android:layout_width="105sp"
+                android:layout_height="50sp"
+                android:layout_toRightOf="@id/r2_btn"
+                android:layout_below="@id/w2_btn"
+                android:layout_toEndOf="@+id/line1"
+                android:textSize="25sp"
+                android:background="@drawable/buttonstyles"
+                android:text="0"  />
+            <Button
+                android:id="@+id/b4_btn"
+                android:layout_width="150sp"
+                android:layout_height="50sp"
+                android:layout_below="@+id/b3_btn"
+                android:layout_alignParentStart="true"
+                android:text="Bowler 4"
+                android:background="@drawable/buttonstyles"/>
+
+            <Button
+                android:id="@+id/r4_btn"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                android:layout_toRightOf="@id/b3_btn"
+                android:background="@drawable/buttonstyles"
+                android:layout_below="@+id/r3_btn"
+                android:layout_toEndOf="@id/line"
+                android:textSize="25sp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/w4_btn"
+                android:layout_width="105sp"
+                android:layout_height="50sp"
+                android:layout_toRightOf="@id/r3_btn"
+                android:layout_below="@id/w3_btn"
+                android:layout_toEndOf="@+id/line1"
+                android:textSize="25sp"
+                android:background="@drawable/buttonstyles"
+                android:text="0"  />
+            <Button
+                android:id="@+id/b5_btn"
+                android:layout_width="150sp"
+                android:layout_height="50sp"
+                android:layout_below="@+id/b4_btn"
+                android:layout_alignParentStart="true"
+                android:text="Bowler 5"
+                android:background="@drawable/buttonstyles"/>
+
+            <Button
+                android:id="@+id/r5_btn"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                android:layout_toRightOf="@id/b5_btn"
+                android:background="@drawable/buttonstyles"
+                android:layout_below="@+id/r4_btn"
+                android:layout_toEndOf="@id/line"
+                android:textSize="25sp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/w5_btn"
+                android:layout_width="105sp"
+                android:layout_height="50sp"
+                android:layout_toRightOf="@id/r5_btn"
+                android:layout_below="@id/w4_btn"
+                android:layout_toEndOf="@+id/line1"
+                android:textSize="25sp"
+                android:background="@drawable/buttonstyles"
+                android:text="0"  />
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
